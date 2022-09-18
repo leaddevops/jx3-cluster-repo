@@ -8,6 +8,7 @@ data:
     in_repo_config:
       enabled:
         leaddevops/jx3-cluster-repo: true
+        leaddevops/pyappjx3: true
     plank: {}
     pod_namespace: jx
     prowjob_namespace: jx
@@ -20,6 +21,7 @@ data:
         skip-unknown-contexts: false
       merge_method:
         leaddevops/jx3-cluster-repo: merge
+        leaddevops/pyappjx3: merge
       queries:
       - labels:
         - approved
@@ -31,6 +33,7 @@ data:
         - needs-rebase
         repos:
         - leaddevops/jx3-cluster-repo
+        - leaddevops/pyappjx3
       - labels:
         - updatebot
         missingLabels:
@@ -41,6 +44,7 @@ data:
         - needs-rebase
         repos:
         - leaddevops/jx3-cluster-repo
+        - leaddevops/pyappjx3
       target_url: http://lighthouse-jx.35.193.36.161.nip.io/merge/status
 kind: ConfigMap
 metadata:
